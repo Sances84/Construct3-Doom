@@ -1,0 +1,88 @@
+{
+	"name": "Список событий 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 671230551833936
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"const canvas = runtime.objects.screen.getFirstInstance();",
+						"window.C3Doom.bindCanvas(canvas);",
+						"await window.C3Doom.init(\"./doom.wasm\");"
+					]
+				}
+			],
+			"sid": 758605129209041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 831799503745530
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"window.C3Doom.step();"
+					]
+				}
+			],
+			"sid": 715332248347807
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "keys",
+					"sid": 367918171198560
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"window.C3Doom.keyDown(event.keyCode);"
+					]
+				}
+			],
+			"sid": 797849425070891
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-released",
+					"objectClass": "keys",
+					"sid": 604293098664984
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"window.C3Doom.keyUp(event.keyCode);"
+					]
+				}
+			],
+			"sid": 621932945842579
+		}
+	],
+	"sid": 643314412660590
+}

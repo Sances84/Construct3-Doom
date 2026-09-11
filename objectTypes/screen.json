@@ -1,0 +1,10 @@
+{
+	"name": "screen",
+	"plugin-id": "DrawingCanvas",
+	"sid": 920923274295332,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
